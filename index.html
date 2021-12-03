@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color:rgb(173, 238, 184);
+        }
+        .pai{
+            text-align: center;
+            margin:50px auto;
+            width: 80%;
+            background-color:rgb(2, 112, 2)
+        }
+        .corpo{
+            background-color:rgb(226, 248, 226)
+        }
+        h3{
+            padding-top:25px;
+        }
+        form{
+            margin:auto;
+            text-align: center;
+            width: 50%;
+          /*  display: flex;
+            justify-content: center;
+            flex-direction: column;*/
+            
+        }
+        input{
+            width:70%;
+            height: 25px;
+        }
+        #botao{
+            color: white;
+            font-weight: bold;
+            background-color: green;
+            margin: auto;
+            width:50%;
+            height:40px;
+        }
+       
+        #escolha{
+            font-weight: bold;
+            width:20px;
+            text-align: center;
+            margin: auto;
+        }
+       /* style responsivel */
+        @media screen and (max-width:600px){
+          .pai{
+              margin-top: 20px;
+            width: 90%;
+           }
+           
+            img{
+            width: 100%;
+        }
+        h3{
+          margin: auto;
+           width: 80%;
+
+        }
+        form{
+           width: 90%;
+        }
+        }
+
+    </style>
+    <title>Cadastro</title>
+</head>
+<body>
+
+  <div class="pai">
+    <div class="logo">
+        <img src="imagem/FireShot-Capture-007---Cadastro---127.0.0.1_03.png" alt="">
+    </div>
+        <div class="corpo">
+                <h3>CADASTRO MEMBROS <br> JAGUARANA</h3><BR></BR>
+                <form action="https://formsubmit.co/mixrdgnv@gmail.com" method="POST" name="igreja" >
+
+                        <label for="nome">Nome completo</label><br>
+                        <input type="nome" name="data[Nome completo]"> 
+                        
+                        <br><br>
+                  
+
+
+                        <label for="tel">Telefone</label><br>
+                        <input type="number"  name="data[Telefone]"> 
+                        
+                        <br><br>
+
+                        <label for="endereço">Endereço</label><br>
+                        <input type="endereço"  name="data[Endereço]"> 
+                        
+                        <br><br>
+
+                        <label for="data">Data de nacimento</label><br>
+                        <input type="date"  name="data[data de nacimento]"> 
+                        
+                        <br><br>
+                        
+                        <label for="local">Função atual</label><br>
+                        <input type="local"  name="data[Função atual]"> 
+                        
+                        <br><br>
+
+                        <label for="Data batismo">Data de batismo </label><br>
+                        <input type="date"  name="data[Data de batismo]"> 
+                        
+                        <br><br>
+                        <h3>
+                         Foto
+                        </h3>
+                        
+                        <input type="file" name="data[image]" /></br>
+                        
+                        
+                        <br><br><br>
+
+                        <label for="radio">Estado civil</label><br>
+                        <input type="radio" name="data[Estado civil]" id="escolha">Casado(a)
+                       
+                        <input type="radio" name="data[Estado civil]" id="escolha">Solteiro(a)
+                        <br><br>
+                       
+                        <input type="submit" value="ENVIAR" id="botao"onclick="msg()">
+
+                        <input type="hidden" name="_captcha" value="false" />
+                       
+                        <input
+                        type="hidden"
+                        name="_next"
+                        value="https://catalogo-mullymodas.netlify.app"/>
+
+                        <!-----<script>
+                            function msg() {
+                              alert("OBRIGADO POR PREENCHER!!!");
+                            }
+                            </script>!--->
+                </form>
+        </div>
+  </div>
+
+</body>
+</html>
