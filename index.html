@@ -6,15 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body{
-            background-color:rgb(173, 238, 184);
+            background-color:rgb(147, 251, 165);
         }
-        .pai{
+       .pai{ 
+            border-radius: 25px;
+            box-shadow:1px 0px 25px 10px rgb(255, 255, 255);
             text-align: center;
             margin:50px auto;
             width: 80%;
             background-color:rgb(2, 112, 2)
         }
         .corpo{
+           
             background-color:rgb(226, 248, 226)
         }
         h3{
@@ -30,14 +33,17 @@
             
         }
         input{
+
+            border-radius: 25px;
             width:90%;
-            height: 25px;
+            height: 30px;
         }
         #botao{
             color: white;
             font-weight: bold;
             background-color: green;
             margin: auto;
+            margin-bottom: 25px;
             width:50%;
             height:40px;
         }
@@ -79,53 +85,57 @@
     </div>
         <div class="corpo">
                 <h3>CADASTRO MEMBROS <br> JAGUARANA</h3><BR></BR>
-                <form action="https://formsubmit.co/mixrdgnv@gmail.com" method="POST" name="igreja" >
+                <form  action="https://api.staticforms.xyz/submit" method="POST" name="igreja" >
+
+
+                    <input type="hidden" name="accessKey" value="afdd25d6-3ee0-4b57-bc6b-d00bfc0383ce">
 
                         <label for="nome">Nome completo</label><br>
-                        <input type="nome" name="data[Nome completo]"> 
+                        <input type="nome" name="$Nome completo"> 
                         
                         <br><br>
                   
 
 
                         <label for="tel">Telefone</label><br>
-                        <input type="number"  name="data[Telefone]"> 
+                        <input type="number"  name="$Telefone"> 
                         
                         <br><br>
 
                         <label for="endereço">Endereço</label><br>
-                        <input type="endereço"  name="data[Endereço]"> 
+                        <input type="endereço"  name="$Endereço"> 
                         
                         <br><br>
 
-                        <label for="data">Data de nacimento</label><br>
-                        <input type="date"  name="data[data de nacimento]"> 
+                        <label for="date">Data de nascimento</label><br>
+                        <input type="date"  name="$data de nacimento"> 
                         
+                        <br><br><br>
+
+                        <input type="radio" name="$Estado civil" id="escolha" value="casado(a)">
+                        <label for="radio">Casado(a)</label>
+                       
+                        <input type="radio" name="$Estado civil" id="escolha" value="Solteiro(a)">
+                        <label for="radio">Solteiro(a)</label>
+                        <br>
+
+
+
                         <br><br>
                         
                         <label for="local">Função atual</label><br>
-                        <input type="local"  name="data[Função atual]"> 
+                        <input type="local"  name="$Função atual"> 
                         
                         <br><br>
 
                         <label for="Data batismo">Data de batismo </label><br>
-                        <input type="date"  name="data[Data de batismo]"> 
+                        <input type="date"  name="$Data de batismo">
                         
-                        <br><br>
-                        <h3>
-                         Foto
-                        </h3>
-                        
-                        <input type="file" name="data[image]" /></br>
-                        
-                        
-                        <br><br><br>
+                        <!---<input type="file" name="$image" /></br>--->
+                          <br><br> <br>
 
-                        <label for="radio">Estado civil</label><br>
-                        <input type="radio" name="data[Estado civil]" id="escolha">Casado(a)
-                       
-                        <input type="radio" name="data[Estado civil]" id="escolha">Solteiro(a)
-                        <br><br>
+                        
+                        
                        
                         <input type="submit" value="ENVIAR" id="botao"onclick="msg()">
 
