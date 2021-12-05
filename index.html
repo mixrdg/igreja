@@ -85,41 +85,39 @@
     </div>
         <div class="corpo">
                 <h3>CADASTRO MEMBROS <br> JAGUARANA</h3><BR></BR>
-                <form  action="https://api.staticforms.xyz/submit" method="POST" name="igreja" >
+                <form  action="https://sheetdb.io/api/v1/bapy07pg2dkuj" method="POST" name="igreja" id="sheetdb-form" >
 
-                    <!--CHAVE DE ACESSO--->
+                    <!--CHAVE DE ACESSO PARA ...API --->
                     <input type="hidden" name="accessKey" value="afdd25d6-3ee0-4b57-bc6b-d00bfc0383ce">
-                        <!---REDIRECIONAMENTO-->
-                        <input type="hidden" name="redirectTo" value="https://mixrdg.github.io/igreja/obrigado">
-
+                      
 
 
                         <label for="nome">Nome completo</label><br>
-                        <input type="nome" name="$Nome completo"> 
+                        <input type="nome" name="data[Nome completo]"> 
                         
                         <br><br>
                   
 
 
                         <label for="tel">Telefone</label><br>
-                        <input type="number"  name="$Telefone"> 
+                        <input type="number"  name="data[Telefone]"> 
                         
                         <br><br>
 
                         <label for="endereço">Endereço</label><br>
-                        <input type="endereço"  name="$Endereço"> 
+                        <input type="endereço"  name="data[Endereço]"> 
                         
                         <br><br>
 
                         <label for="date">Data de nascimento</label><br>
-                        <input type="date"  name="$data de nacimento"> 
+                        <input type="date"  name="data[Data de nascimento]"> 
                         
                         <br><br><br>
                                 <h4>Estado civil</h3> 
-                        <input type="radio" name="$Estado civil" id="escolha" value="casado(a)">
+                        <input type="radio" name="data[Estado civil]" id="escolha" value="casado(a)">
                         <label for="radio">Casado(a)</label>
                        
-                        <input type="radio" name="$Estado civil" id="escolha" value="Solteiro(a)">
+                        <input type="radio" name="data[Estado civil]" id="escolha" value="Solteiro(a)">
                         <label for="radio">Solteiro(a)</label>
                         <br>
 
@@ -128,36 +126,38 @@
                         <br><br>
                         
                         <label for="local">Função atual</label><br>
-                        <input type="local"  name="$Função atual"> 
+                        <input type="local"  name="data[Função atual]"> 
                         
                         <br><br><br>
+                        <label for="Data batismo">Data de batismo nas águas </label><br>
+                        <input type="date"  name="data[Data de batismo]">
 
-                        <h4> Batizado(a) no Espírito Santo ? </h3> 
-
-                        <input type="radio" name="$Batizado no espírito" id="escolha" value="Sim">
-                        <label for="radio">Sim</label>
-                       
-                        <input type="radio" name="$Batizado no espírito" id="escolha" value="Não">
-                        <label for="radio">Não</label>
+                      
                         <br>
                        
                         <br><br>
 
-                        <label for="Data batismo">Data de batismo </label><br>
-                        <input type="date"  name="$Data de batismo">
+                        <h4> Batizado(a) no Espírito Santo ? </h3> 
+
+                            <input type="radio" name="data[Batizado no espírito]" id="escolha" value="Sim">
+                            <label for="radio">Sim</label>
+                           
+                            <input type="radio" name="data[Batizado no espírito]" id="escolha" value="Não">
+                            <label for="radio">Não</label>
                         
                         <br><br><br><br>
 
-                        <label for="Gosta de fazer na igreja">Oque gosta de fazer na Igreja?</label>
-                        <textarea name="$Gosta de fazer na igreja" id="" cols="30" rows="10"></textarea>
+                        <label for="Gosta de fazer na igreja">Oque gosta de fazer na Igreja?</label><br>
+                        <textarea name="data[Gosta de fazer na igreja]" id="" cols="30" rows="10"></textarea>
                        
                         <!---<input type="file" name="$image" /></br>--->
                           <br><br> <br>
 
+                           
+                       
                         
-                        
-                                   <!---BOTAO DE ENVIAR-->  
-                        <input type="submit" value="ENVIAR" id="botao"onclick="msg()">
+                         <!---BOTAO DE ENVIAR-->  
+                        <input type="submit" value="ENVIAR" id="botao">
 
                         <input type="hidden" name="_captcha" value="false" />
                        
@@ -166,6 +166,24 @@
                         name="_next"
                         value="https://catalogo-mullymodas.netlify.app"/>
 
+
+                              <!--redirecionamento sheet db-->
+                    <script>
+                        var form = document.getElementById('sheetdb-form');
+                        form.addEventListener("submit", e => {
+                          e.preventDefault();
+                          fetch(form.action, {
+                              method : "POST",
+                              body: new FormData(document.getElementById("sheetdb-form")),
+                          }).then(
+                              response => response.json()
+                          ).then((html) => {
+                            // you can put any JS code here
+                            window.location.href = 'https://mixrdg.github.io/igreja/obrigado';
+
+                          });
+                        });
+                      </script>
                         <!-----<script>
                             function msg() {
                               alert("OBRIGADO POR PREENCHER!!!");
