@@ -115,7 +115,7 @@
                         <input type="date"  name="$data de nacimento"> 
                         
                         <br><br><br>
-
+                                <h4>Estado civil</h3> 
                         <input type="radio" name="$Estado civil" id="escolha" value="casado(a)">
                         <label for="radio">Casado(a)</label>
                        
@@ -130,17 +130,33 @@
                         <label for="local">Função atual</label><br>
                         <input type="local"  name="$Função atual"> 
                         
+                        <br><br><br>
+
+                        <h4> Batizado(a) no Espírito Santo ? </h3> 
+
+                        <input type="radio" name="$Batizado no espírito" id="escolha" value="Sim">
+                        <label for="radio">Sim</label>
+                       
+                        <input type="radio" name="$Batizado no espírito" id="escolha" value="Não">
+                        <label for="radio">Não</label>
+                        <br>
+                       
                         <br><br>
 
                         <label for="Data batismo">Data de batismo </label><br>
                         <input type="date"  name="$Data de batismo">
                         
+                        <br><br><br><br>
+
+                        <label for="Gosta de fazer na igreja">Oque gosta de fazer na Igreja?</label>
+                        <textarea name="$Gosta de fazer na igreja" id="" cols="30" rows="10"></textarea>
+                       
                         <!---<input type="file" name="$image" /></br>--->
                           <br><br> <br>
 
                         
                         
-                       
+                                   <!---BOTAO DE ENVIAR-->  
                         <input type="submit" value="ENVIAR" id="botao"onclick="msg()">
 
                         <input type="hidden" name="_captcha" value="false" />
