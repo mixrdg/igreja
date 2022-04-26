@@ -8,6 +8,12 @@
         body{
             background-color:rgb(147, 251, 165);
         }
+
+
+        img{
+            display: none;
+        }
+        /*caixa pai*/
        .pai{ 
             border-radius: 25px;
             box-shadow:1px 0px 25px 10px rgb(255, 255, 255);
@@ -16,12 +22,20 @@
             width: 80%;
             background-color:rgb(2, 112, 2)
         }
+
+         
         .corpo{
            
             background-color:rgb(226, 248, 226)
         }
         h3{
-            padding-top:25px;
+            font-size: 45px;
+            color: white;
+            border-radius: 25px;
+            margin:25px auto;
+            width: 70%;
+            background-color: rgb(2, 112, 2);
+            padding: 25px;
         }
         form{
             margin:auto;
@@ -33,19 +47,20 @@
             
         }
         input{
-
+            font-size: 20px;
             border-radius: 25px;
             width:90%;
-            height: 30px;
+            height: 40px;
         }
         #botao{
+            font-size: 100%;
             color: white;
             font-weight: bold;
             background-color: green;
             margin: auto;
             margin-bottom: 25px;
             width:50%;
-            height:40px;
+            height:50px;
         }
          label{
              font-weight: bold;
@@ -57,23 +72,26 @@
             margin: auto;
         }
        /* style responsivel */
-        @media screen and (max-width:600px){
+        @media screen and (max-width:800px){
           .pai{
               margin-top: 20px;
             width: 90%;
            }
            
             img{
+                display: none;
             width: 100%;
         }
         h3{
+            font-size: 140%;
           margin: auto;
-           width: 80%;
+           width: 70%;
 
         }
         form{
            width: 90%;
         }
+        
         }
 
     </style>
@@ -86,7 +104,7 @@
         <img src="imagem/FireShot-Capture-007---Cadastro---127.0.0.1_03.png" alt="">
     </div>
         <div class="corpo">
-                <h3>CADASTRO MEMBROS <br> JAGUARANA</h3><BR></BR>
+                <h3>Exemplo de Fomulario <br> Igreja</h3><BR></BR>
                 <form  action="https://sheetdb.io/api/v1/bapy07pg2dkuj" method="POST" name="igreja" id="sheetdb-form" >
 
                     <!--CHAVE DE ACESSO PARA ...API --->
@@ -159,7 +177,7 @@
                        
                         
                          <!---BOTAO DE ENVIAR-->  
-                        <input type="submit" value="ENVIAR" id="botao">
+                        <input type="submit" value="Cadastrar" id="botao">
 
                         <input type="hidden" name="_captcha" value="false" />
                        
